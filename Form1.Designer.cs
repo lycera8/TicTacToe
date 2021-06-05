@@ -43,6 +43,7 @@ namespace TicTacToe
             this.panel1 = new System.Windows.Forms.Panel();
             this.ngBtn = new System.Windows.Forms.Button();
             this.extBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,7 +176,7 @@ namespace TicTacToe
             this.panel1.Controls.Add(this.btn4);
             this.panel1.Controls.Add(this.btn5);
             this.panel1.Controls.Add(this.btn6);
-            this.panel1.Location = new System.Drawing.Point(26, 12);
+            this.panel1.Location = new System.Drawing.Point(26, 76);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(391, 375);
             this.panel1.TabIndex = 10;
@@ -183,30 +184,46 @@ namespace TicTacToe
             // 
             // ngBtn
             // 
-            this.ngBtn.Location = new System.Drawing.Point(26, 449);
+            this.ngBtn.BackColor = System.Drawing.Color.Khaki;
+            this.ngBtn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ngBtn.Location = new System.Drawing.Point(26, 471);
             this.ngBtn.Name = "ngBtn";
-            this.ngBtn.Size = new System.Drawing.Size(118, 29);
-            this.ngBtn.TabIndex = 12;
+            this.ngBtn.Size = new System.Drawing.Size(114, 28);
+            this.ngBtn.TabIndex = 11;
             this.ngBtn.Text = "New Game";
-            this.ngBtn.UseVisualStyleBackColor = true;
+            this.ngBtn.UseVisualStyleBackColor = false;
             this.ngBtn.Click += new System.EventHandler(this.ngBtn_Click);
             // 
             // extBtn
             // 
-            this.extBtn.Location = new System.Drawing.Point(299, 449);
+            this.extBtn.BackColor = System.Drawing.Color.Khaki;
+            this.extBtn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.extBtn.Location = new System.Drawing.Point(303, 471);
             this.extBtn.Name = "extBtn";
-            this.extBtn.Size = new System.Drawing.Size(118, 26);
-            this.extBtn.TabIndex = 13;
+            this.extBtn.Size = new System.Drawing.Size(114, 28);
+            this.extBtn.TabIndex = 12;
             this.extBtn.Text = "Quit Game";
-            this.extBtn.UseVisualStyleBackColor = true;
+            this.extBtn.UseVisualStyleBackColor = false;
             this.extBtn.Click += new System.EventHandler(this.extBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(116, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 39);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Tic Tac Toe";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
-            this.ClientSize = new System.Drawing.Size(441, 521);
+            this.ClientSize = new System.Drawing.Size(444, 529);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.extBtn);
             this.Controls.Add(this.ngBtn);
             this.Controls.Add(this.panel1);
@@ -226,6 +243,7 @@ namespace TicTacToe
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -244,6 +262,7 @@ namespace TicTacToe
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button ngBtn;
         private System.Windows.Forms.Button extBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
 

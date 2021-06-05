@@ -46,15 +46,16 @@ namespace TicTacToe
 
             turn = !turn;
             btn.Enabled = false;
+            turn_count++;
 
-            winner_check();    
+            winner_check();
         }
 
         private void winner_check()
         {
             bool winner = false;
 
-                //horizontal
+            //Rows
             if (btn1.Text == btn2.Text && btn2.Text == btn3.Text && !btn1.Enabled)
             {
                 winner = true;
@@ -67,6 +68,32 @@ namespace TicTacToe
             {
                 winner = true;
             }
+
+
+            //Column
+            if (btn1.Text == btn4.Text && btn4.Text == btn7.Text && !btn1.Enabled)
+            {
+                winner = true;
+            }
+            else if (btn2.Text == btn5.Text && btn5.Text == btn8.Text && !btn2.Enabled)
+            {
+                winner = true;
+            }
+            else if (btn3.Text == btn6.Text && btn6.Text == btn9.Text && !btn3.Enabled)
+            {
+                winner = true;
+            }
+
+            //Diagonal
+            else if (btn1.Text == btn5.Text && btn5.Text == btn9.Text && !btn1.Enabled)
+            {
+                winner = true;
+            }
+            else if (btn3.Text == btn5.Text && btn5.Text == btn7.Text && !btn3.Enabled)
+            {
+                winner = true;
+            }
+
 
             if (winner)
             {
@@ -83,25 +110,45 @@ namespace TicTacToe
                 }
 
                 MessageBox.Show("The winner is " + the_winner + "!!", "Congratulations!");
-
+                turn_count = 0;
 
             }
+            else
+            {   
+                if (turn_count == 9)
+                {
+                    MessageBox.Show("It's a draw!", "Try Again");
+                }
+               
+               
+            }
+    
         }
         private void stop_the_btns()
         {
-            try
-            {
-                foreach (Control bttn in Controls)
-                {
-                    Button btn = (Button)bttn;
-                    btn.Enabled = false;
-                }
-            }
-            catch { }
+            btn1.Enabled = false;
+            btn2.Enabled = false;
+            btn3.Enabled = false;
+            btn4.Enabled = false;
+            btn5.Enabled = false;
+            btn6.Enabled = false;
+            btn7.Enabled = false;
+            btn8.Enabled = false;
+            btn9.Enabled = false;
         }
 
-        private void ngBtn_Click(object sender, EventArgs e)
+         private void ngBtn_Click(object sender, EventArgs e)
         {
+
+            btn1.Enabled = true; btn1.Text = ""; btn1.BackColor = Color.Khaki;
+            btn2.Enabled = true; btn2.Text = ""; btn2.BackColor = Color.Khaki;
+            btn3.Enabled = true; btn3.Text = ""; btn3.BackColor = Color.Khaki;
+            btn4.Enabled = true; btn4.Text = ""; btn4.BackColor = Color.Khaki;
+            btn5.Enabled = true; btn5.Text = ""; btn5.BackColor = Color.Khaki;
+            btn6.Enabled = true; btn6.Text = ""; btn6.BackColor = Color.Khaki;
+            btn7.Enabled = true; btn7.Text = ""; btn7.BackColor = Color.Khaki;
+            btn8.Enabled = true; btn8.Text = ""; btn8.BackColor = Color.Khaki;
+            btn9.Enabled = true; btn9.Text = ""; btn9.BackColor = Color.Khaki;
 
         }
 
@@ -111,6 +158,11 @@ namespace TicTacToe
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
