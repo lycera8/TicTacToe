@@ -20,16 +20,6 @@ namespace TicTacToe
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -114,15 +104,15 @@ namespace TicTacToe
 
             }
             else
-            {   
+            {
                 if (turn_count == 9)
                 {
                     MessageBox.Show("It's a draw!", "Try Again");
                 }
-               
-               
+
+
             }
-    
+
         }
         private void stop_the_btns()
         {
@@ -137,7 +127,7 @@ namespace TicTacToe
             btn9.Enabled = false;
         }
 
-         private void ngBtn_Click(object sender, EventArgs e)
+        private void ngBtn_Click(object sender, EventArgs e)
         {
 
             btn1.Enabled = true; btn1.Text = ""; btn1.BackColor = Color.Khaki;
@@ -157,14 +147,5 @@ namespace TicTacToe
             Application.Exit();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

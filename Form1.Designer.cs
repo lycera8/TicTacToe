@@ -180,7 +180,6 @@ namespace TicTacToe
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(391, 375);
             this.panel1.TabIndex = 10;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // ngBtn
             // 
@@ -215,7 +214,6 @@ namespace TicTacToe
             this.label1.Size = new System.Drawing.Size(212, 39);
             this.label1.TabIndex = 13;
             this.label1.Text = "Tic Tac Toe";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
@@ -240,7 +238,6 @@ namespace TicTacToe
             this.Text = "Tic Tac Toe";
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.White;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
